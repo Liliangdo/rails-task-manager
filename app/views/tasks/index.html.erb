@@ -1,2 +1,17 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>TO DO LIST</h1>
+
+<%= link_to "New task", tasks_new_path %>
+<h2>
+  <% @tasks.each do |task| %>
+
+  <%= task.name %>
+
+  <%= task.done %>
+
+  <%= link_to "See in detail", task_path(task) %>
+
+  <% end %>
+</h2>
+
+
+
