@@ -1,17 +1,17 @@
+<div>
 
+  <h1><%= @task.name %></h1>
 
-<h2>
+  <p>Description: <%= @task.description %></p>
 
-  <%= @task.name %>
+  <p>Done: <%= @task.done %></p>
 
-  <%= @task.description %>
+ <p><%= link_to "Return to home", tasks_path %></p>
 
-  <%= @task.done %>
+</div>
 
-  <%= link_to "Return to home", tasks_path %>
+<%= link_to "Edit my task", edit_task_path(@task) %>
 
-</h2>
-
-<%= link_to "Edit task", edit_task_path(@task) %>
+<%= link_to "Delete my task", task_path(@task), method: "delete" %>
 
 
